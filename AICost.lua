@@ -52,6 +52,8 @@ function AISystem:update(dt)
 					difficultyMultiplier = difficultyMultiplier * 0.8
 				end
 				
+				-- Для увеличения стоимости необходимо / заменить на * и подобрать нужное значение myMultiplier
+				-- To increase the cost, you need / replace with * and select the desired value of myMultiplier
 				price = (price * dt * difficultyMultiplier) / myMultiplier
 
 				g_currentMission:addMoney(-price, job.startedFarmId, MoneyType.AI, true)
